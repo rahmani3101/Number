@@ -1,13 +1,10 @@
 import java.util.Scanner;
 public class SmithNumber {
         
-    int digitSum(int n) {
-        int sum = 0;
-        while (n > 0) {
-            sum += n % 10;
-            n /= 10;
-        }
-        return sum;
+    int digitSum(int num) {
+        if(num==0)
+            return 0;
+        return num%10 + digitSum(num/10);
     }
 
     
